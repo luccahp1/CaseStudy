@@ -64,10 +64,12 @@ namespace HelpDeskAPI.Controllers
             try
             {
                 var status = await call.Update();
-                if (status == 1)
-                    return Ok(new { msg = "Call updated", call });
-
-                return Conflict(new { error = "Failed update" });
+                return status switch
+                {
+                    1 => Ok(new { msg = "Call updated", call }),
+                    -2 => Conflict(new { error = "Data is stale for Call " + call.Id + ", not updated" }),
+                    _ => BadRequest(new { error = "Call " + call.Id + " not updated" })
+                };
             }
             catch (Exception ex)
             {

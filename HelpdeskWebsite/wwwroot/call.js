@@ -1,86 +1,91 @@
-﻿$(() => { // main jQuery routine - executes every on page load, $ is short for jquery
+﻿$(() => {
     $("#deletedialog").hide();
-    getAll(""); // first grab the data from the server
-}); // jQuery ready method
+    $("#openAddCall").on("click", () => setupForAdd());
+    getAll("");
+});
+
+const updateStatus = (text) => {
+    $("#status").text(text);
+};
 
 const getAll = async (msg) => {
     try {
-        $("#callList").text("Finding Call Information...");
+        updateStatus("Finding Call Information...");
         let response = await fetch(`api/call`);
         if (response.ok) {
-            let payload = await response.json(); // this returns a promise, so we await it
+            let payload = await response.json();
             buildCallList(payload);
-            msg === "" ? // are we appending to an existing message
-                $("#status").text("Calls Loaded") : $("#status").text(`${msg} - Calls Loaded`);
-        } else if (response.status !== 404) { // probably some other client side error
+            msg === "" ? updateStatus("Calls Loaded") : updateStatus(`${msg} - Calls Loaded`);
+        } else if (response.status !== 404) {
             let problemJson = await response.json();
             errorRtn(problemJson, response.status);
-        } else { // else 404 not found
-            $("#status").text("no such path on server");
-        } // else
+        } else {
+            updateStatus("no such path on server");
+        }
 
-        // get problem data
         response = await fetch(`api/problem`);
         if (response.ok) {
-            let divs = await response.json(); // this returns a promise, so we await it
+            let divs = await response.json();
             sessionStorage.setItem("allproblems", JSON.stringify(divs));
-        } else if (response.status !== 404) { // probably some other client side error
+        } else if (response.status !== 404) {
             let problemJson = await response.json();
             errorRtn(problemJson, response.status);
-        } else { // else 404 not found
-            $("#status").text("no such path on server");
-        } // else
+        } else {
+            updateStatus("no such path on server");
+        }
 
-        // get employee data
         response = await fetch(`api/employee`);
         if (response.ok) {
-            let divs = await response.json(); // this returns a promise, so we await it
+            let divs = await response.json();
             sessionStorage.setItem("allemployees", JSON.stringify(divs));
-        } else if (response.status !== 404) {   
+        } else if (response.status !== 404) {
             let problemJson = await response.json();
             errorRtn(problemJson, response.status);
-        } else { // else 404 not found
-            $("#status").text("no such path on server");
-        } // else
+        } else {
+            updateStatus("no such path on server");
+        }
 
     } catch (error) {
-        $("#status").text(error.message);
+        updateStatus(error.message);
     }
-}; // getAll
+};
+
 const buildCallList = (data, usealldata = true) => {
     $("#callList").empty();
     $("#callListHeader").empty();
-    $("#callListStatus").empty();
-    statusdiv = $(`<div class="list-group-item row d-flex" id="status" style="color: black;">Call List</div>`);
-    headerdiv = $(`<div class= "list-group-item row d-flex text-center" id="heading">
-         <div class="col-4 h4">Date</div>
-         <div class="col-4 h4">For</div>
-         <div class="col-4 h4">Problem</div>
+    const headerdiv = $(`<div class="list-group-item row d-flex text-center" id="heading">
+         <div class="col-3 h5">Opened</div>
+         <div class="col-3 h5">Employee</div>
+         <div class="col-3 h5">Problem</div>
+         <div class="col-3 h5">Status</div>
      </div>`);
-    statusdiv.appendTo($("#callListStatus"));
     headerdiv.appendTo($("#callListHeader"));
-    usealldata ? sessionStorage.setItem("allcalls", JSON.stringify(data)) : null;
-    btn = $(`<button class="list-group-item row d-flex" id="0">...click to add a call</button>`);    
+    if (usealldata) {
+        sessionStorage.setItem("allcalls", JSON.stringify(data));
+    }
+    let btn = $(`<button class="list-group-item row d-flex" id="0">...click to add a call</button>`);
     btn.appendTo($("#callList"));
     data.forEach(call => {
         btn = $(`<button class="list-group-item row d-flex" id="${call.id}">`);
-        btn.html(`<div class="col-4" id="calldate${call.id}">${formatDate(call.dateOpened).replace("T", " ")}</div>
- <div class="col-4" id="callfor${call.id}">${call.employeeName}</div>
- <div class="col-4" id="callproblem${call.id}">${call.problemDescription}</div>`
+        const statusText = call.openStatus ? "Open" : "Closed";
+        btn.html(`<div class="col-3" id="calldate${call.id}">${formatDate(call.dateOpened).replace("T", " ")}</div>
+ <div class="col-3" id="callfor${call.id}">${call.employeeName}</div>
+ <div class="col-3" id="callproblem${call.id}">${call.problemDescription}</div>
+ <div class="col-3" id="callstatus${call.id}">${statusText}</div>`
         );
         btn.appendTo($("#callList"));
-    }); // forEach
-}; // buildCallList
+    });
+};
 
 const validateModal = () => {
-    $("#modalstatus").removeClass(); //remove any existing css on div
+    $("#modalstatus").removeClass();
     if ($("#CallModalForm").valid()) {
-        $("#modalstatus").attr("class", "badge bg-success"); //green
+        $("#modalstatus").attr("class", "badge bg-success");
         $("#modalstatus").text("data entered is valid");
         $("#actionbutton").prop("disabled", false);
     }
     else {
-        $("#modalstatus").attr("class", "badge bg-danger"); //red
+        $("#modalstatus").attr("class", "badge bg-danger");
         $("#modalstatus").text("fix errors");
         $("#actionbutton").prop("disabled", true);
     }
@@ -89,10 +94,6 @@ const validateModal = () => {
 document.addEventListener("keyup", e => {
     validateModal();
 });
-
-const countChars = (sel) => {
-    return $(sel).val();
-};
 
 $("#CallModalForm").validate({
     rules: {
@@ -116,55 +117,54 @@ $("#CallModalForm").validate({
             required:  "This field is required. (max. 250 characters)",  maxlength: "Too many characters! (max. 250)"
         }
     }
-}); //CallModalForm.validate
+});
 
 $("#srch").on("keyup", () => {
     let alldata = JSON.parse(sessionStorage.getItem("allcalls"));
-    let filtereddata = alldata.filter((call) => call.employeeName.match(new RegExp($("#srch").val(), 'i')));
+    let term = new RegExp($("#srch").val(), 'i');
+    let filtereddata = alldata.filter((call) => term.test(call.employeeName) || term.test(call.problemDescription));
     buildCallList(filtereddata, false);
-}); // srch keyup
-
+});
 
 $("select").on('change', (e) => {
     validateModal();
-}); 
+});
 
 $("textarea").on('input', (e) => {
     validateModal();
-}); 
+});
 
 $("#actionbutton").on('click', (e) => {
     $("#actionbutton").val() === "update" ? update() : add();
 });
 
-
 $("#deletebutton").on('click', (e) => {
-    
+
     $("#deletedialog").show();
-}); 
+});
 
 $("#callList").on('click', (e) => {
     if (!e) e = window.event;
     let id = e.target.parentNode.id;
     if (id === "callList" || id === "") {
         id = e.target.id;
-    } 
+    }
     if (id !== "status" && id !== "heading") {
         let data = JSON.parse(sessionStorage.getItem("allcalls"));
         if (id === "0") {
-            setupForAdd()
+            setupForAdd();
         } else {
             data.forEach(call => {
                 if (call.id === parseInt(id)) {
                     call.openStatus ? setupForUpdate(call) : setupForView(call);
                     return;
-                } 
-            }); 
+                }
+            });
         }
     } else {
-        return false; 
+        return false;
     }
-}); 
+});
 
 $("#deletenobutton").on("click", (e) => {
     $("#deletedialog").hide();
@@ -186,41 +186,40 @@ $("#checkBoxClose").on("click", () => {
         $("#labelDateClosed").text("");
         sessionStorage.setItem("dateclosed", "");
     }
-}); 
-
+});
 
 const loadProblemDDL = (probid) => {
-    html = '';
+    let html = '';
     $('#ddlProblems').empty();
-    let allproblems = JSON.parse(sessionStorage.getItem('allproblems'));
+    let allproblems = JSON.parse(sessionStorage.getItem('allproblems')) || [];
     allproblems.forEach((prob) => {
-        html += `<option value="${prob.id}">${prob.description}</option>`
+        html += `<option value="${prob.id}">${prob.description}</option>`;
     });
     $('#ddlProblems').append(html);
     $('#ddlProblems').val(probid);
-}; 
+};
 const loadEmployeeDDL = (empid) => {
-    html = '';
+    let html = '';
     $('#ddlEmployees').empty();
-    let allemployees = JSON.parse(sessionStorage.getItem('allemployees'));
+    let allemployees = JSON.parse(sessionStorage.getItem('allemployees')) || [];
     allemployees.forEach((emp) => {
-        html += `<option value="${emp.id}">${emp.lastname}</option>`
+        html += `<option value="${emp.id}">${emp.firstname} ${emp.lastname}</option>`;
     });
     $('#ddlEmployees').append(html);
     $('#ddlEmployees').val(empid);
-}; 
+};
 const loadTechDDL = (techid) => {
-    html = '';
+    let html = '';
     $('#ddlTechs').empty();
-    let allemployees = JSON.parse(sessionStorage.getItem('allemployees'));
+    let allemployees = JSON.parse(sessionStorage.getItem('allemployees')) || [];
     allemployees.forEach((emp) => {
         if (emp.isTech) {
-            html += `<option value="${emp.id}">${emp.lastname}</option>`
+            html += `<option value="${emp.id}">${emp.firstname} ${emp.lastname}</option>`;
         }
     });
     $('#ddlTechs').append(html);
     $('#ddlTechs').val(techid);
-}; 
+};
 
 const clearModalFields = () => {
     loadProblemDDL(-1);
@@ -231,27 +230,26 @@ const clearModalFields = () => {
     $("#checkBoxClose").prop("checked", false);
     const nowDate = formatDate();
     $("#labelDateOpened").text(nowDate.replace("T", " "));
-    $(".dateClosedItem").hide()
-    $(".closeCallItem").hide()
+    $(".dateClosedItem").hide();
+    $(".closeCallItem").hide();
     sessionStorage.setItem("dateopened", nowDate);
     sessionStorage.removeItem("call");
-    $("#theModal").modal("toggle");
     let validator = $("#CallModalForm").validate();
     validator.resetForm();
-    $("#modalstatus").show()
-    $("#modalstatus").removeClass("badge bg-success bg-danger");
+    $("#actionbutton").prop("disabled", true);
+    $("#modalstatus").text("");
 };
 
 const setupForAdd = () => {
     $("#actionbutton").val("add");
     $("#modal-title").html("<h4>add call</h4>");
-    $("#theModal").modal("toggle");
     $("#modalstatus").text("add new call");
     $("#theModalLabel").text("Add Call");
     $("#actionbutton").show();
     $("#deletebutton").hide();
     clearModalFields();
-}; 
+    $("#theModal").modal("show");
+};
 
 const setupForUpdate = (call) => {
     $("#actionbutton").val("update");
@@ -265,14 +263,16 @@ const setupForUpdate = (call) => {
     $("#TextBoxNotes").val(call.notes);
     $("#labelDateOpened").text(formatDate(call.dateOpened).replace("T", " "));
     $("#checkBoxClose").prop("checked", !call.openStatus);
-    $(".dateClosedItem").hide()
-    $(".closeCallItem").show()
+    call.dateClosed ? $("#labelDateClosed").text(formatDate(call.dateClosed).replace("T", " ")) : $("#labelDateClosed").text("");
+    $(".closeCallItem").show();
+    call.openStatus ? $(".dateClosedItem").hide() : $(".dateClosedItem").show();
 
     sessionStorage.setItem("dateopened", formatDate(call.dateOpened));
+    call.dateClosed ? sessionStorage.setItem("dateclosed", formatDate(call.dateClosed)) : sessionStorage.setItem("dateclosed", "");
     sessionStorage.setItem("call", JSON.stringify(call));
 
     $("#modalstatus").text("update data");
-    $("#theModal").modal("toggle");
+    $("#theModal").modal("show");
     $("#theModalLabel").text("Update Call");
     $("#actionbutton").show();
     $("#deletebutton").show();
@@ -290,9 +290,9 @@ const setupForView = (call) => {
     $("#labelDateOpened").text(formatDate(call.dateOpened).replace("T", " "));
     $("#labelDateClosed").text(formatDate(call.dateClosed).replace("T", " "));
     $("#checkBoxClose").prop("checked", !call.openStatus);
-    $(".dateClosedItem").show()
-    $(".closeCallItem").show()
-    $("#modalstatus").hide()
+    $(".dateClosedItem").show();
+    $(".closeCallItem").show();
+    $("#modalstatus").hide();
     $("#modalFields *").prop("disabled", true);
 
     sessionStorage.setItem("dateopened", formatDate(call.dateOpened));
@@ -301,15 +301,15 @@ const setupForView = (call) => {
 
 
     $("#modalstatus").text("view data");
-    $("#theModal").modal("toggle");
+    $("#theModal").modal("show");
     $("#theModalLabel").text("View Closed Call");
     $("#actionbutton").hide();
     $("#deletebutton").show();
-}; 
+};
 
 const add = async () => {
     try {
-        call = new Object();
+        let call = new Object();
         call.problemId = parseInt($("#ddlProblems").val());
         call.employeeId = parseInt($("#ddlEmployees").val());
         call.techId = parseInt($("#ddlTechs").val());
@@ -322,7 +322,6 @@ const add = async () => {
         call.notes = $("#TextBoxNotes").val();
         call.timer = null;
 
-        console.log(call)
         let response = await fetch("api/call", {
             method: "POST",
             headers: {
@@ -331,28 +330,28 @@ const add = async () => {
             body: JSON.stringify(call)
         });
         if (response.ok) {
-          
+
             let payload = await response.json();
             getAll(payload.msg);
-              
+
         } else if (response.status !== 404) {
             let problemJson = await response.json();
             errorRtn(problemJson, response.status);
         } else {
-            $("#status").text("no such path on server");
-        } 
+            updateStatus("no such path on server");
+        }
     } catch (error) {
-        $("#status").text("no such path on server");
-    } 
-    $("#theModal").modal("toggle");
+        updateStatus(error.message);
+    }
+    $("#theModal").modal("hide");
 
 
-}; 
+};
 
 
-const update = async (e) => { // click event handler
+const update = async (e) => {
     try {
-     
+
         let call = JSON.parse(sessionStorage.getItem("call"));
         call.problemId = parseInt($("#ddlProblems").val());
         call.employeeId = parseInt($("#ddlEmployees").val());
@@ -361,6 +360,8 @@ const update = async (e) => { // click event handler
         call.dateOpened = sessionStorage.getItem("dateopened");
         if (!call.openStatus) {
             call.dateClosed = sessionStorage.getItem("dateclosed");
+        } else {
+            call.dateClosed = null;
         }
         call.notes = $("#TextBoxNotes").val();
         let response = await fetch("api/call", {
@@ -372,20 +373,23 @@ const update = async (e) => { // click event handler
         if (response.ok) {
             let payload = await response.json();
             getAll(payload.msg);
-            $("#status").text(`Call ${call.id} added`);
+            updateStatus(payload.msg);
+        } else if (response.status === 409) {
+            let payload = await response.json();
+            updateStatus(payload.error);
         } else if (response.status !== 404) {
             let problemJson = await response.json();
             errorRtn(problemJson, response.status);
         } else {
-            $("#status").text("no such path on server");
-        } 
-      
+            updateStatus("no such path on server");
+        }
+
     } catch (error) {
-        $("#status").text(error.message);
+        updateStatus(error.message);
         console.table(error);
     }
-    $("#theModal").modal("toggle");
-}; 
+    $("#theModal").modal("hide");
+};
 
 
 const _delete = async () => {
@@ -398,27 +402,28 @@ const _delete = async () => {
         if (response.ok) {
             let data = await response.json();
             getAll(data.msg);
+            updateStatus(data.msg);
         } else {
             $('#status').text(`Status - ${response.status}, Problem on delete server side, see server console`);
-        } 
-        $('#theModal').modal('toggle');
+        }
+        $('#theModal').modal('hide');
     } catch (error) {
         $('#status').text(error.message);
     }
-}; // _delete
+};
 
 const errorRtn = (problemJson, status) => {
     if (status > 499) {
-        $("#status").text("Problem server side, see debug console");
+        updateStatus("Problem server side, see debug console");
     } else {
         let keys = Object.keys(problemJson.errors);
-        problem = {
+        let problem = {
             status: status,
-            statusText: problemJson.errors[keys[0]][0] 
+            statusText: problemJson.errors[keys[0]][0]
         };
-        $("#status").text("Problem client side, see browser console");
+        updateStatus("Problem client side, see browser console");
         console.log(problem);
-    } 
+    }
 };
 
 const formatDate = (date) => {
@@ -434,4 +439,4 @@ const formatDate = (date) => {
     let _min = d.getMinutes();
     if (_min < 10) { _min = "0" + _min; }
     return _year + "-" + _month + "-" + _day + "T" + _hour + ":" + _min;
-}
+};

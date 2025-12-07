@@ -1,74 +1,46 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Case 1 - Home</title>
+    <title>Case 2 - Home</title>
     <meta charset="utf-8" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        body{
-            max-height:95vh;
-        }
-        .navbar {
-            background-color: lightskyblue !important;
-            height:10vh;
-        }
-
-        #bottom{
-            display:flex;
-            align-items:center;
-            flex-direction:column;
-            height:85vh;
-        }
-        #bottom img{
-            height:15vh;
-            margin:5vh;
-            margin-bottom:1.5vh
-        }
-
-        footer {
-            text-align: left;
-            padding: 1rem;
-            background-color: #f1f1f1;
-            max-height:5vh;
-
-        }
-
-    </style>
+    <link href="employee.css" rel="stylesheet" />
 </head>
 <body>
-  
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand mx-3" href="#">Case#1</a>
-        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mx-3">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/employee.html">Employee</a>
-                </li>
-
-            </ul>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand mx-3" href="/home.html">Case #2</a>
+            <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employee.html">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/call.html">Calls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/report.html">Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-header">
+            <img src="/img/imgnetworks.jpg" alt="Helpdesk logo" />
+            <h2>Helpdesk Portal</h2>
+            <p class="pill-label">Navigate to manage employees, calls, and reports.</p>
         </div>
-    </nav>
-    <div id="bottom">
-        <img src="/img/imgnetworks.jpg" />
-        <h2>Help desk</h2>
-        <p>v1.0</p>
     </div>
+
     <script src="/lib/js/jquery.min.js"></script>
     <script src="/lib/js/bootstrap.min.js"></script>
-    <script src="/employeelookup.js"></script>
-
-    <footer> 2025 - Info3070</footer>        
+    <footer> 2025 - Info3070</footer>
 </body>
-
-
 </html>
