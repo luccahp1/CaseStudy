@@ -125,20 +125,25 @@ namespace HelpDeskDAL
 
         public async Task<int> Delete(int? id)
         {
-            int EmployeesDeleted = -1;
+            int employeesDeleted = -1;
             try
             {
-                HelpdeskContext _db = new();
-                Employee? selectedEmployee = await _db.Employees.FirstOrDefaultAsync(emp => emp.Id == id);
-                EmployeesDeleted = await _repo.Delete((int)id!); // returns # of rows removed
+                using HelpdeskContext _db = new();
+                var selectedEmployee = await _db.Employees.FirstOrDefaultAsync(emp => emp.Id == id);
+
+                if (selectedEmployee != null)
+                {
+                    _db.Employees.Remove(selectedEmployee);
+                    employeesDeleted = await _db.SaveChangesAsync();
+                }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("Problem in " + GetType().Name + " " +
-                MethodBase.GetCurrentMethod()!.Name + " " + ex.Message);
+                                MethodBase.GetCurrentMethod()!.Name + " " + ex.Message);
                 throw;
             }
-            return EmployeesDeleted;
+            return employeesDeleted;
         }
 
 

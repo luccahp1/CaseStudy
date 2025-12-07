@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q07ne9vbgf</Fingerprint>
-      <Integrity>SsVSDdBxgqVtxepppM867+7gspmEb/6RvzVSOnE4YPI=</Integrity>
+      <Fingerprint>uscv1tvwf7</Fingerprint>
+      <Integrity>jneKBMdI6pggKXX/MfFG41BbOS9dtRRvUnMl4IAnlFM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\call.js'))</OriginalItemSpec>

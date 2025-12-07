@@ -9,8 +9,8 @@
     <StaticWebAssetEndpoint Include="_content/HelpdeskWebsite/call.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\call.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SsVSDdBxgqVtxepppM867\u002B7gspmEb/6RvzVSOnE4YPI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14997"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022SsVSDdBxgqVtxepppM867\u002B7gspmEb/6RvzVSOnE4YPI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Dec 2025 21:09:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jneKBMdI6pggKXX/MfFG41BbOS9dtRRvUnMl4IAnlFM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15524"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jneKBMdI6pggKXX/MfFG41BbOS9dtRRvUnMl4IAnlFM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Dec 2025 22:33:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HelpdeskWebsite/call.oazxhorewr.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\call.html'))</AssetFile>
@@ -18,11 +18,11 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oazxhorewr"},{"Name":"integrity","Value":"sha256-EI5qq5cNgtOo6ndIKUzStDwKSxaP0agJVLqjH8JetYc="},{"Name":"label","Value":"_content/HelpdeskWebsite/call.html"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7566"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022EI5qq5cNgtOo6ndIKUzStDwKSxaP0agJVLqjH8JetYc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Dec 2025 21:09:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HelpdeskWebsite/call.q07ne9vbgf.js">
+    <StaticWebAssetEndpoint Include="_content/HelpdeskWebsite/call.uscv1tvwf7.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\call.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"q07ne9vbgf"},{"Name":"integrity","Value":"sha256-SsVSDdBxgqVtxepppM867\u002B7gspmEb/6RvzVSOnE4YPI="},{"Name":"label","Value":"_content/HelpdeskWebsite/call.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14997"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022SsVSDdBxgqVtxepppM867\u002B7gspmEb/6RvzVSOnE4YPI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Dec 2025 21:09:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uscv1tvwf7"},{"Name":"integrity","Value":"sha256-jneKBMdI6pggKXX/MfFG41BbOS9dtRRvUnMl4IAnlFM="},{"Name":"label","Value":"_content/HelpdeskWebsite/call.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15524"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jneKBMdI6pggKXX/MfFG41BbOS9dtRRvUnMl4IAnlFM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Dec 2025 22:33:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HelpdeskWebsite/employee.5wp7pdryao.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\employee.js'))</AssetFile>

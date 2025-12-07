@@ -1,6 +1,7 @@
 ﻿$(() => {
     $("#deletedialog").hide();
     $("#openAddCall").on("click", () => setupForAdd());
+    $("#srch").on("keyup", runCallSearch);
     getAll("");
 });
 
@@ -48,6 +49,23 @@ const getAll = async (msg) => {
     } catch (error) {
         updateStatus(error.message);
     }
+};
+
+const runCallSearch = () => {
+    let allData = JSON.parse(sessionStorage.getItem("allcalls")) || [];
+    const searchText = $("#srch").val().trim();
+
+    if (searchText === "") {
+        buildCallList(allData, true);
+        return;
+    }
+
+    const term = new RegExp(searchText, "i");
+    const filtered = allData.filter(call =>
+        term.test(call.employeeName) || term.test(call.problemDescription)
+    );
+
+    buildCallList(filtered, false);
 };
 
 const buildCallList = (data, usealldata = true) => {
@@ -119,12 +137,12 @@ $("#CallModalForm").validate({
     }
 });
 
-$("#srch").on("keyup", () => {
-    let alldata = JSON.parse(sessionStorage.getItem("allcalls"));
-    let term = new RegExp($("#srch").val(), 'i');
-    let filtereddata = alldata.filter((call) => term.test(call.employeeName) || term.test(call.problemDescription));
-    buildCallList(filtereddata, false);
-});
+//$("#srch").on("keyup", () => {
+//    let alldata = JSON.parse(sessionStorage.getItem("allcalls"));
+//    let term = new RegExp($("#srch").val(), 'i');
+//    let filtereddata = alldata.filter((call) => term.test(call.employeeName) || term.test(call.problemDescription));
+//    buildCallList(filtereddata, false);
+//});
 
 $("select").on('change', (e) => {
     validateModal();
