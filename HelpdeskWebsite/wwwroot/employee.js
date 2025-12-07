@@ -17,6 +17,7 @@
         $("#actionbutton").val() === "update" ? update() : add();
     });
     $("#uploader").on("change", handleUpload);
+    $("#employeeList").on("click", "button", handleEmployeeListClick);
     getAll("");
 });
 
@@ -148,6 +149,25 @@ const buildEmployeeList = (data, usealldata = true) => {
         btn.appendTo($("#employeeList"));
     });
 };
+
+const handleEmployeeListClick = (e) => {
+    const id = e.currentTarget.id;
+
+    if (id === "0") {
+        setupForAdd();
+        return;
+    }
+
+    const allEmployees = JSON.parse(sessionStorage.getItem("allemployees")) || [];
+
+    if (allEmployees.length === 0) {
+        updateStatus("No employee data available. Please reload the employees.");
+        return;
+    }
+
+    setupForUpdate(id, allEmployees);
+};
+
 
 const loadDepartmentDDL = (deptId) => {
     let html = '';
