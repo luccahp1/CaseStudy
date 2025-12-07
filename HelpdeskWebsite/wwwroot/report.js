@@ -1,41 +1,41 @@
 ﻿$(() => {
-    $("#callReportBtn").on("click", async (e) => {
+$("#callReportBtn").on("click", async (e) => {
         try {
-            $("#lblstatus").text("generating report on server - please wait...");
+            updateStatus("generating report on server - please wait...");
             let response = await fetch(`api/callreport`);
             if (!response.ok)
                 throw new Error(
                     `Status - ${response.status}, Text - ${response.statusText}`
                 );
             let data = await response.json();
-            $("#lblstatus").text("report generated");
+            updateStatus("report generated");
             data.msg === "Call Report Generated"
                 ? window.open("/pdfs/callreport.pdf")
-                : $("#lblstatus").text("problem generating report");
+                : updateStatus("problem generating report");
         } catch (error) {
-            $("#lblstatus").text(error.message);
+            updateStatus(error.message);
         }
     });
 
   
         $("#employeeReportBtn").on("click", async (e) => {
             try {
-                $("#lblstatus").text("generating report on server - please wait...");
+                updateStatus("generating report on server - please wait...");
                 let response = await fetch(`api/employeereport`);
                 if (!response.ok)
                     throw new Error(
                         `Status - ${response.status}, Text - ${response.statusText}`
                     );
                 let data = await response.json();
-                $("#lblstatus").text("report generated");
+                updateStatus("report generated");
                 data.msg === "Employee Report Generated"
                     ? window.open("/pdfs/employeereport.pdf")
-                    : $("#lblstatus").text("problem generating report");
+                    : updateStatus("problem generating report");
             } catch (error) {
-                $("#lblstatus").text(error.message);
+                updateStatus(error.message);
             }
         });
-    
+
 
 });
 
@@ -54,4 +54,8 @@ const errorRtn = (problemJson, status) => {
         $("#status").text("Problem client side, see browser console");
         console.log(problem);
     } // else
+};
+
+const updateStatus = (text) => {
+    $("#lblstatus").text(text);
 };

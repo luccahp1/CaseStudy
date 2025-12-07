@@ -52,7 +52,7 @@
                 .SetPaddingLeft(18)
                 .SetTextAlignment(TextAlignment.LEFT))
                 .SetBorder(Border.NO_BORDER));
-                table.AddCell(new Cell().Add(new Paragraph("Last Name")
+                table.AddCell(new Cell().Add(new Paragraph("Employee")
                 .SetFontSize(16)
                 .SetBold()
                 .SetPaddingLeft(16)

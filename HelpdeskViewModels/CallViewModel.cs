@@ -157,8 +157,8 @@ public class CallViewModel
                     Notes = call.Notes,
                     Timer = call.Timer != null ? Convert.ToBase64String(call.Timer) : null,
 
-                    EmployeeName = emp != null ? $"{emp.LastName}" : "not found",
-                    TechName = tech != null ? $"{tech.LastName}" : "not found",
+                    EmployeeName = emp != null ? $"{emp.FirstName} {emp.LastName}" : "not found",
+                    TechName = tech != null ? $"{tech.FirstName} {tech.LastName}" : "not found",
                     ProblemDescription = problem != null ? problem.Description : "not found"
                 };
 
