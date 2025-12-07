@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "dgSpecHash": "S2Wp6u/Pu38=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucca\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package xunit.runner.visualstudio. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "xunit.runner.visualstudio",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package xunit. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "xunit",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore.SqlServer. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore.Proxies. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Proxies",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1103",
+      "level": "Error",
+      "message": "Unable to find a stable package Microsoft.NET.Test.Sdk with version (>= 17.8.0)\r\n  - Found 1 version(s) in Microsoft Visual Studio Offline Packages [ Nearest version: 17.10.0-preview-24080-01 ]",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.NET.Test.Sdk",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.WindowsDesktop.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.NETCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\casestudyTests\\casestudyTests.csproj",
+      "libraryId": "Microsoft.AspNetCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

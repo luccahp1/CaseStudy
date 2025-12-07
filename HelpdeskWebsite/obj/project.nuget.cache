@@ -1,0 +1,108 @@
+{
+  "version": 2,
+  "dgSpecHash": "bs3awA+0QwQ=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Swashbuckle.AspNetCore. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Swashbuckle.AspNetCore",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package itext7. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "itext7",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore.SqlServer. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.EntityFrameworkCore.Proxies. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Proxies",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.WindowsDesktop.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.NETCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.AspNetCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Host.win-x64. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "filePath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+      "libraryId": "Microsoft.NETCore.App.Host.win-x64",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

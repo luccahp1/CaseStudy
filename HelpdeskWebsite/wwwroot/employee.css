@@ -1,0 +1,86 @@
+﻿#status {
+    background-color: green;
+    font-family: Helvetica;
+    font-size: large;
+    color: yellow;
+}
+
+button.list-group-item {
+    color: blue;
+    font-family: Helvetica;
+    font-size: larger;
+}
+
+.navbar {
+    background-color: lightskyblue !important;
+    height: 10vh;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    max-height: 85vh; 
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+img {
+    height: 15vh;
+    margin: 3vh;
+}
+
+
+
+footer {
+    text-align: left;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    max-height: 5vh;
+}
+
+#status {
+    background-color: lightblue;
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+#callsList, button:nth-child(even) {
+    background-color: #e6f3ff; 
+}
+
+#callsList button:nth-child(odd) {
+    background-color: white;
+}
+
+#callsList button {
+    color: #212529; 
+    font-size: 1rem;
+    text-align: left;
+}
+
+#callsList button:hover {
+        background-color: #9fd0ff;
+        cursor: pointer;
+}
+
+.buttonsTop{
+    display: flex;
+    justify-content:center;
+    
+}
+
+div.error {
+    color: white;
+    background: linear-gradient(135deg, #003366, #00509e);
+    padding: 0.4em 0.7em;
+    font-size: 90%;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0.25em;
+    border-radius: 0.5rem;
+}
+
+ 
