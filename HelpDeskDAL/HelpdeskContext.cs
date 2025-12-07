@@ -27,7 +27,7 @@ public partial class HelpdeskContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=HelpdeskDb;Trusted_Connection=True;");
+        optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectModels;Database=HelpdeskDb;Trusted_Connection=True;");
         optionsBuilder.UseLazyLoadingProxies();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
