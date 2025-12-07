@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj": {}
+    "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj": {
+    "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj",
+        "projectUniqueName": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj",
         "projectName": "HelpDeskDAL",
-        "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj",
+        "projectPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj",
         "packagesPath": "C:\\Users\\lucca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\obj\\",
+        "outputPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,7 +25,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -43,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -79,37 +80,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
+    "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj",
         "projectName": "HelpdeskViewModels",
-        "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj",
+        "projectPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj",
         "packagesPath": "C:\\Users\\lucca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\obj\\",
+        "outputPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -123,14 +110,15 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj": {
-                "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj"
+              "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj": {
+                "projectPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpDeskDAL\\HelpDeskDAL.csproj"
               }
             }
           }
@@ -145,7 +133,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -161,37 +149,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj": {
+    "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+        "projectUniqueName": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
         "projectName": "HelpdeskWebsite",
-        "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
+        "projectPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\HelpdeskWebsite.csproj",
         "packagesPath": "C:\\Users\\lucca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskWebsite\\obj\\",
+        "outputPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -205,14 +179,15 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
-                "projectPath": "C:\\Users\\lucca\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
+              "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj": {
+                "projectPath": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskViewModels\\HelpdeskViewModels.csproj"
               }
             }
           }
@@ -227,7 +202,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -253,24 +228,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -279,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

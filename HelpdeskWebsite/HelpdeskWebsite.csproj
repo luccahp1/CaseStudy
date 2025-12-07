@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\img\imgnetworks.jpg" />
     <None Include="wwwroot\lib\css\bootstrap.min.css" />
     <None Include="wwwroot\lib\js\bootstrap.min.js" />
     <None Include="wwwroot\lib\js\jquery.min.js" />

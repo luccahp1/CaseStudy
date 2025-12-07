@@ -1,0 +1,97 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\call.html",
+      "PackagePath": "staticwebassets\\call.html"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\call.js",
+      "PackagePath": "staticwebassets\\call.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\employee.css",
+      "PackagePath": "staticwebassets\\employee.css"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\employee.html",
+      "PackagePath": "staticwebassets\\employee.html"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\employee.js",
+      "PackagePath": "staticwebassets\\employee.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\employeelookup.html",
+      "PackagePath": "staticwebassets\\employeelookup.html"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\employeelookup.js",
+      "PackagePath": "staticwebassets\\employeelookup.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\home.html",
+      "PackagePath": "staticwebassets\\home.html"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\img\\NewEmployee.png",
+      "PackagePath": "staticwebassets\\img\\NewEmployee.png"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\img\\imgnetworks.jpg",
+      "PackagePath": "staticwebassets\\img\\imgnetworks.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\lib\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\lib\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\lib\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\lib\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\pdfs\\callreport.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\callreport.pdf"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\pdfs\\employeereport.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\employeereport.pdf"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\report.html",
+      "PackagePath": "staticwebassets\\report.html"
+    },
+    {
+      "Id": "C:\\Users\\lucca\\OneDrive\\Documents\\CaseStudy\\HelpdeskWebsite\\wwwroot\\report.js",
+      "PackagePath": "staticwebassets\\report.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HelpdeskWebsite.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HelpdeskWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HelpdeskWebsite.props",
+      "PackagePath": "build\\HelpdeskWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HelpdeskWebsite.props",
+      "PackagePath": "buildMultiTargeting\\HelpdeskWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HelpdeskWebsite.props",
+      "PackagePath": "buildTransitive\\HelpdeskWebsite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
